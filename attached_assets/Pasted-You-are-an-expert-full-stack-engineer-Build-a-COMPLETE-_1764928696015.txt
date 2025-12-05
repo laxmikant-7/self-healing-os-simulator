@@ -1,0 +1,141 @@
+You are an expert full-stack engineer.  
+Build a COMPLETE “Self-Healing OS Simulator” web application.
+
+I want the FULL project delivered with:
+
+====================================================
+📌 1. TECHNOLOGY STACK
+====================================================
+Frontend → React + Vite + TailwindCSS  
+Animations → Framer Motion  
+Backend → Node.js + Express  
+Database → JSON file based storage  
+Deployment → Should work on Render / Railway / Replit
+
+====================================================
+📌 2. FILE STRUCTURE (CREATE EXACTLY THIS)
+====================================================
+
+self-healing-os-simulator/
+ ├── server/
+ │    ├── server.js
+ │    ├── db.json
+ │    ├── utils.js
+ │    └── package.json
+ ├── client/
+ │    ├── index.html
+ │    ├── vite.config.js
+ │    ├── package.json
+ │    ├── src/
+ │         ├── main.jsx
+ │         ├── App.jsx
+ │         ├── components/
+ │         │      ├── Dashboard.jsx
+ │         │      ├── ProcessTable.jsx
+ │         │      ├── SystemHealth.jsx
+ │         │      ├── FileManager.jsx
+ │         │      ├── Logs.jsx
+ │         │      └── Navbar.jsx
+ │         └── styles.css
+ ├── README.md
+
+====================================================
+📌 3. BACKEND REQUIREMENTS
+====================================================
+
+### Create these REST APIs:
+
+1️⃣ GET /api/processes  
+2️⃣ POST /api/processes/update  
+3️⃣ POST /api/detectFaults  
+4️⃣ POST /api/healFaults  
+5️⃣ GET /api/files  
+6️⃣ POST /api/files/repair  
+7️⃣ GET /api/health  
+8️⃣ POST /api/logs/add  
+9️⃣ GET /api/logs  
+
+The backend must:
+✔ simulate processes (pid, memory, cpu, heartbeat)  
+✔ detect faults (crash, freeze, high load, missing files)  
+✔ auto-heal (restart, reset heartbeat, restore checksum)  
+✔ log every event  
+
+`db.json` MUST contain:
+{
+  "processes": [],
+  "files": [],
+  "logs": [],
+  "system_health": {}
+}
+
+====================================================
+📌 4. FRONTEND REQUIREMENTS
+====================================================
+
+Build a **modern dashboard** with:
+
+✔ Framer Motion animations everywhere  
+✔ Glassmorphism cards  
+✔ CPU/Memory health gauges  
+✔ Live process table  
+✔ Fault highlight (red pulse animation)  
+✔ Logs viewer  
+✔ File manager  
+✔ "Inject Fault" and "Auto-Heal" buttons  
+
+====================================================
+📌 5. UI DETAILS (IMPORTANT)
+====================================================
+
+Navbar with:
+- OS Simulator title
+- Buttons: Inject Fault, Heal System, Refresh
+
+Dashboard Layout:
+----------------------------------------------------
+| System Health | Animated |
+| Processes Table | With live status colors |
+| File Manager | corruption indicator |
+| Logs Viewer | scrolling list |
+----------------------------------------------------
+
+Use TailwindCSS + Framer Motion for:
+- Fade-in components
+- Slide transitions
+- Pulse red effect on faults
+- Smooth card elevation hover animations
+
+====================================================
+📌 6. APP LOGIC
+====================================================
+
+Every 3 seconds:
+- frontend calls backend to fetch updated state
+- highlight unhealthy processes in red
+- blink animation for corrupted files
+- update logs in real-time
+
+====================================================
+📌 7. DEPLOYMENT EXPECTATIONS
+====================================================
+
+After generating code:
+✔ Give step-by-step instructions to deploy on Render  
+✔ Output final URLs  
+✔ Provide environment variables if needed  
+✔ Ensure CORS enabled  
+✔ Provide final “production build + start” commands
+
+====================================================
+📌 8. FINAL DELIVERY FORMAT
+====================================================
+
+❗ Deliver everything in ONE output:
+1. Full folder structure  
+2. Every file with COMPLETE code  
+3. Commands to install + run  
+4. Deployment guide  
+5. No placeholders—use working code only  
+
+Start now and generate the full project.
