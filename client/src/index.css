@@ -175,6 +175,86 @@
   }
 }
 
+/* Glassmorphism card utility */
+@layer components {
+  .glass-card {
+    @apply relative rounded-lg border border-white/10 dark:border-white/5;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .dark .glass-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-navbar {
+    @apply sticky top-0 z-50 border-b border-white/10;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .dark .glass-navbar {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  }
+
+  .status-dot {
+    @apply w-2.5 h-2.5 rounded-full;
+  }
+
+  .status-dot-healthy {
+    @apply bg-status-healthy animate-pulse-dot;
+  }
+
+  .status-dot-warning {
+    @apply bg-status-warning animate-pulse-dot;
+  }
+
+  .status-dot-critical {
+    @apply bg-status-critical animate-pulse-glow;
+  }
+
+  /* Circular gauge progress */
+  .gauge-circle {
+    transition: stroke-dashoffset 0.5s ease-out;
+  }
+
+  /* Scrollbar styling for logs */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/40;
+  }
+}
+
 /**
  * Using the elevate system.
  * Automatic contrast adjustment.
